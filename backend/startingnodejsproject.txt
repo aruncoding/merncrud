@@ -1,0 +1,77 @@
+step 1 --> Create app.js file where all configuration is write for nodejs,express and mongodb
+add file name node.js on root directory of your project
+
+step 2 --> First npm command to setup the project
+npm init -y 
+
+step 3--> Second npm Command  to setup express
+npm i express
+
+step 4 --> Third npm Command  to setup nodemon , we install it to run server every time when we save any file
+npm i -D nodemon
+
+step -5 --> Fifth npm Command  to setup  dotenv file, we install it to write secret thing about project here
+ npm i dotenv
+
+step -6 --> Sixth npm Command  to setup  jsonwebtoken
+npm i jsonwebtoken
+
+step -7 --> Seventh npm Command  to setup  bcrpyt for password hassing
+npm i bcrpyt
+
+step -8 -->Ninth npm Command  to setup backend with react, we install it for frontend connection to emit cors policy error in our project
+npm i cors
+
+step -9 -->Ninth npm Command  to setup backend with react, we install it for frontend connection to emit cors policy error in our project
+npm i cors
+
+step -10 --> Import express on your main file here is app.js which we created on step 1
+import  express  from "express";
+
+step -11 --> create object of express which we inported above 
+const app = express()
+
+step -12 --> Import dotenv on your main file here is app.js which we created on step 1
+import dotenv from 'dotenv';
+
+step -13 --> create .env file on your root directory of your project and defing PORT number,DATABASE_URL in following ways
+PORT = 8000
+DATABASE_URL = "mongodb://localhost:27017"
+
+
+step -14 --> After creating .env file and defining port number--> Defining port number on which serever is running
+const port = process.env.PORT
+
+step -15 --> To run the server write below code on your app.js file created on step 1
+app.listen(port, () => {
+    console.log(`Server Listening at http://127.0.0.1:${port}`)
+})
+
+step -16 --> Import cors on your main file here is app.js which we created on step 1
+import cors from 'cors';
+dotenv.config()
+
+step -17 --> Import cors on your main file here is app.js which we created on step 1
+import cors from 'cors';
+
+step -18 --> Defning Cors Policy
+app.use(cors())
+
+step -19 --> connect database on app.js file created on step 1
+const DATABASE_URL = process.env.DATABASE_URL
+
+step -20 --> Import connectdb file on your main file here is app.js which we created on step 1
+import connectDB from "./config/connectdb.js";
+
+step -21 --> call the function and pass DATABASE_URL to that function which we created ion cofig/connectdb.js file
+connectDB(DATABASE_URL)
+
+step -22 --> create schema in a folder name models and create a file with capital letter starting here is CandidateProfile.js
+
+step -23 --> create controller in a folder name controllers and create a file  here is candidateProfileController.js
+
+step -24 --> import Models in the controller to use models here we import the CandidateProfileModel in candidateProfileController
+
+step -25 --> create routes in a folder name routes and create a file  here is CandidateRoutes.js
+
+
